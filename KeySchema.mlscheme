@@ -1,5 +1,11 @@
 {
   "ConfigurationSettings": {
+    "Action-InputControllerTrigger": [
+      {
+        "Input": "MouseMove-DeltaX",
+        "Sensitivity": 1
+      }
+    ],
     "Action-MoveHeadposeNegX": [
       {
         "Input": "KeyCode-Left",
@@ -105,12 +111,6 @@
     "Action-RotateHeadposeX": [
       {
         "Input": "MouseMove-DeltaY",
-        "Sensitivity": 1
-      }
-    ],
-    "Action-RotateHeadposeY": [
-      {
-        "Input": "MouseMove-DeltaX",
         "Sensitivity": 1
       }
     ],
