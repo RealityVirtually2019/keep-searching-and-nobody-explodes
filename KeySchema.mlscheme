@@ -1,0 +1,152 @@
+{
+  "ConfigurationSettings": {
+    "Action-MoveHeadposeNegX": [
+      {
+        "Input": "KeyCode-Left",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveHeadposeNegY": [
+      {
+        "Input": "KeyCode-Q",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveHeadposeNegZ": [
+      {
+        "Input": "KeyCode-W",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveHeadposePosX": [
+      {
+        "Input": "KeyCode-Right",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveHeadposePosY": [
+      {
+        "Input": "KeyCode-E",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveHeadposePosZ": [
+      {
+        "Input": "KeyCode-S",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveHeadposeZ": [
+      {
+        "Input": "MouseMove-ScrollWheelY",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveInputControllerNegX": [
+      {
+        "Input": "Shift-KeyCode-Left",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveInputControllerNegY": [
+      {
+        "Input": "Shift-KeyCode-Q",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveInputControllerNegZ": [
+      {
+        "Input": "Shift-KeyCode-W",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveInputControllerPosX": [
+      {
+        "Input": "Shift-KeyCode-Right",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveInputControllerPosY": [
+      {
+        "Input": "Shift-KeyCode-E",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-MoveInputControllerPosZ": [
+      {
+        "Input": "Shift-KeyCode-S",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateHeadposeNegX": [
+      {
+        "Input": "KeyCode-Up",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateHeadposeNegY": [
+      {
+        "Input": "KeyCode-A",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateHeadposePosX": [
+      {
+        "Input": "KeyCode-Down",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateHeadposePosY": [
+      {
+        "Input": "KeyCode-D",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateHeadposeX": [
+      {
+        "Input": "MouseMove-DeltaY",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateHeadposeY": [
+      {
+        "Input": "MouseMove-DeltaX",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateHeadposeZ": [
+      {
+        "Input": "MouseMove-ScrollWheelX",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateInputControllerNegY": [
+      {
+        "Input": "Shift-KeyCode-D",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateInputControllerPosY": [
+      {
+        "Input": "Shift-KeyCode-A",
+        "Sensitivity": 1
+      }
+    ],
+    "ActionInputLabels": {
+      
+    },
+    "ActiveConfigurationPath": "C:\\Users\\cobyp\\Documents\\keep-searching-and-nobody-explodes\\KeySchema.mlscheme",
+    "BindingsVersion": 2,
+    "DeviceType": "keyboardMouse",
+    "InputControllerID": 0,
+    "KeySensitivity": 1,
+    "MaxRotation": 1,
+    "MaxTranslation": 1,
+    "MouseSensitivity-ScrollWheelY": -1,
+    "OS": "Any"
+  },
+  "DeviceLabel": "Peripheral - Key/Mouse",
+  "DeviceName": "PeripheralKeyMouseSparseDevice",
+  "DeviceType": "Peripheral",
+  "ManifestType": "Configuration"
+}
