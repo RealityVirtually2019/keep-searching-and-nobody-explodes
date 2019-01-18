@@ -42,12 +42,6 @@
         "Sensitivity": 1
       }
     ],
-    "Action-MoveHeadposeZ": [
-      {
-        "Input": "MouseMove-ScrollWheelY",
-        "Sensitivity": 1
-      }
-    ],
     "Action-MoveInputControllerNegX": [
       {
         "Input": "Shift-KeyCode-Left",
