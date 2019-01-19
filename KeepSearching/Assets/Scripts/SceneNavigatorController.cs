@@ -48,4 +48,16 @@ public class SceneNavigatorController : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Stop input api and unregister callbacks.
+    /// </summary>
+    void OnDestroy()
+    {
+        if (MLInput.IsStarted)
+        {
+            MLInput.OnTriggerDown -= HandleOnTriggerDown;
+            MLInput.OnControllerButtonDown -= HandleOnButtonDown;
+        }
+    }
 }
