@@ -1,5 +1,29 @@
 {
   "ConfigurationSettings": {
+    "Action-InputControllerButtonBumper": [
+      {
+        "Input": "Shift-KeyCode-1",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-InputControllerButtonHomeTap": [
+      {
+        "Input": "Shift-KeyCode-2",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-InputControllerEndTouch0": [
+      {
+        "Input": "Shift-KeyCode-3",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-InputControllerEndTouch1": [
+      {
+        "Input": "Shift-KeyCode-4",
+        "Sensitivity": 1
+      }
+    ],
     "Action-InputControllerTrigger": [
       {
         "Input": "MouseMove-DeltaX",
@@ -114,9 +138,21 @@
         "Sensitivity": 1
       }
     ],
+    "Action-RotateInputControllerNegX": [
+      {
+        "Input": "Shift-KeyCode-Up",
+        "Sensitivity": 1
+      }
+    ],
     "Action-RotateInputControllerNegY": [
       {
         "Input": "Shift-KeyCode-D",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-RotateInputControllerPosX": [
+      {
+        "Input": "Shift-KeyCode-Down",
         "Sensitivity": 1
       }
     ],
