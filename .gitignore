@@ -5,9 +5,11 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
-
 # Optional Unity Plugins
 KeepSearching/Assets/Plugins*
+
+# Magic Leap Certificate
+KeepSearching/certificate/
 
 # Visual Studio cache directory
 .vs/
