@@ -66,6 +66,11 @@
         "Sensitivity": 1
       }
     ],
+    "Action-MoveHeadposeZ": [
+      {
+        "Input": "MouseMove-ScrollWheelY"
+      }
+    ],
     "Action-MoveInputControllerNegX": [
       {
         "Input": "Shift-KeyCode-Left",
@@ -132,6 +137,11 @@
         "Sensitivity": 1
       }
     ],
+    "Action-RotateHeadposeY": [
+      {
+        "Input": "MouseMove-DeltaX"
+      }
+    ],
     "Action-RotateHeadposeZ": [
       {
         "Input": "MouseMove-ScrollWheelX",
@@ -162,9 +172,6 @@
         "Sensitivity": 1
       }
     ],
-    "ActionInputLabels": {
-      
-    },
     "ActiveConfigurationPath": "C:\\Users\\cobyp\\Documents\\keep-searching-and-nobody-explodes\\KeySchema.mlscheme",
     "BindingsVersion": 2,
     "DeviceType": "keyboardMouse",
