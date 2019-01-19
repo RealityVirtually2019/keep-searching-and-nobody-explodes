@@ -5,6 +5,9 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+# Magic Leap Certificate
+KeepSearching/certificate/
+
 # Visual Studio cache directory
 .vs/
 
@@ -23,6 +26,7 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+.DS_Store
 
 # Unity3D generated meta files
 *.pidb.meta
