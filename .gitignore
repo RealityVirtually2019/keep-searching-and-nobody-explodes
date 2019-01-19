@@ -5,6 +5,9 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+# Magic Leap Certificate
+KeepSearching/certificate/
+
 # Visual Studio cache directory
 .vs/
 
