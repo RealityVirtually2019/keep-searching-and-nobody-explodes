@@ -152,7 +152,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -338,6 +338,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b545b1660673493e9902a241e6f919a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1083355780
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1799498983}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.181
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99616706
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.08747156
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 169.964
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &1140412357
 GameObject:

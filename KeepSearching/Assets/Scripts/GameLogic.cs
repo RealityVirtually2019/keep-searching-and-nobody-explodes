@@ -36,8 +36,8 @@ public class GameLogic : MonoBehaviour
 
     private void Log(string message, params object[] args)
     {
-#if DEVELOPMENT_BUILD
+//#if DEVELOPMENT_BUILD
         Debug.LogFormat(message, args);
-#endif
+//#endif
     }
 }

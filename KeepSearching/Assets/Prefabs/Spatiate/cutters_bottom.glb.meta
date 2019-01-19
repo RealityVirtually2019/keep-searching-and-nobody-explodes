@@ -1,0 +1,72 @@
+fileFormatVersion: 2
+guid: ac69bbdddfa1848239e8974890552744
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: main asset/glbMedia
+    100002: main asset/glbMedia/glbMedia
+    100004: main asset/glbMedia/glbMedia/rotation
+    100006: main asset/glbMedia/glbMedia/rotation/position
+    100008: main asset/glbMedia/glbMedia/rotation/position/Primitive
+    100010: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.373, 0.373, 0.373,
+      1.000):Spikes_16 (Instance) (Instance)
+    100012: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.373, 0.373, 0.373,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive
+    100014: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.922, 0.922, 0.922,
+      1.000):Spikes_16 (Instance) (Instance)
+    100016: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.922, 0.922, 0.922,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive
+    100018: main asset/glbMedia/glbMedia/rotation/position/RGBA(1.000, 0.984, 0.000,
+      1.000):ButtonWhite (Instance) (Instance)
+    100020: main asset/glbMedia/glbMedia/rotation/position/RGBA(1.000, 0.984, 0.000,
+      1.000):ButtonWhite (Instance) (Instance)/Primitive
+    400000: main asset/glbMedia/Transform
+    400002: main asset/glbMedia/glbMedia/Transform
+    400004: main asset/glbMedia/glbMedia/rotation/Transform
+    400006: main asset/glbMedia/glbMedia/rotation/position/Transform
+    400008: main asset/glbMedia/glbMedia/rotation/position/Primitive/Transform
+    400010: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.373, 0.373, 0.373,
+      1.000):Spikes_16 (Instance) (Instance)/Transform
+    400012: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.373, 0.373, 0.373,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive/Transform
+    400014: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.922, 0.922, 0.922,
+      1.000):Spikes_16 (Instance) (Instance)/Transform
+    400016: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.922, 0.922, 0.922,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive/Transform
+    400018: main asset/glbMedia/glbMedia/rotation/position/RGBA(1.000, 0.984, 0.000,
+      1.000):ButtonWhite (Instance) (Instance)/Transform
+    400020: main asset/glbMedia/glbMedia/rotation/position/RGBA(1.000, 0.984, 0.000,
+      1.000):ButtonWhite (Instance) (Instance)/Primitive/Transform
+    2300000: main asset/glbMedia/glbMedia/rotation/position/Primitive/MeshRenderer
+    2300002: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.373, 0.373, 0.373,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive/MeshRenderer
+    2300004: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.922, 0.922, 0.922,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive/MeshRenderer
+    2300006: main asset/glbMedia/glbMedia/rotation/position/RGBA(1.000, 0.984, 0.000,
+      1.000):ButtonWhite (Instance) (Instance)/Primitive/MeshRenderer
+    3300000: main asset/glbMedia/glbMedia/rotation/position/Primitive/MeshFilter
+    3300002: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.373, 0.373, 0.373,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive/MeshFilter
+    3300004: main asset/glbMedia/glbMedia/rotation/position/RGBA(0.922, 0.922, 0.922,
+      1.000):Spikes_16 (Instance) (Instance)/Primitive/MeshFilter
+    3300006: main asset/glbMedia/glbMedia/rotation/position/RGBA(1.000, 0.984, 0.000,
+      1.000):ButtonWhite (Instance) (Instance)/Primitive/MeshFilter
+    4300000: mesh Primitive
+    4300002: mesh Primitive (1)
+    4300004: mesh Primitive (2)
+    4300006: mesh Primitive (3)
+    11400000: main asset/glbMedia/MonoBehaviour-UnityGLTF.InstantiatedGLTFObject
+    100100000: main asset
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _importNormals: 0
+  _importMaterials: 1
+  _useJpgTextures: 0
