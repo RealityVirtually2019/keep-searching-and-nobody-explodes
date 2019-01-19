@@ -2,37 +2,31 @@
   "ConfigurationSettings": {
     "Action-InputControllerButtonBumper": [
       {
-        "Input": "Shift-KeyCode-1",
+        "Input": "KeyCode-]",
         "Sensitivity": 1
       }
     ],
     "Action-InputControllerButtonHomeTap": [
       {
-        "Input": "Shift-KeyCode-2",
-        "Sensitivity": 1
-      }
-    ],
-    "Action-InputControllerEndTouch0": [
-      {
-        "Input": "Shift-KeyCode-3",
-        "Sensitivity": 1
-      }
-    ],
-    "Action-InputControllerEndTouch1": [
-      {
-        "Input": "Shift-KeyCode-4",
+        "Input": "KeyCode-=",
         "Sensitivity": 1
       }
     ],
     "Action-InputControllerTrigger": [
       {
-        "Input": "MouseMove-DeltaX",
+        "Input": "MouseMove-ScrollWheelX",
+        "Sensitivity": 1
+      }
+    ],
+    "Action-InputControllerTriggerDown": [
+      {
+        "Input": "KeyCode-[",
         "Sensitivity": 1
       }
     ],
     "Action-MoveHeadposeNegX": [
       {
-        "Input": "KeyCode-Left",
+        "Input": "KeyCode-A",
         "Sensitivity": 1
       }
     ],
@@ -50,7 +44,7 @@
     ],
     "Action-MoveHeadposePosX": [
       {
-        "Input": "KeyCode-Right",
+        "Input": "KeyCode-D",
         "Sensitivity": 1
       }
     ],
@@ -68,7 +62,7 @@
     ],
     "Action-MoveInputControllerNegX": [
       {
-        "Input": "Shift-KeyCode-Left",
+        "Input": "Shift-KeyCode-A",
         "Sensitivity": 1
       }
     ],
@@ -86,7 +80,7 @@
     ],
     "Action-MoveInputControllerPosX": [
       {
-        "Input": "Shift-KeyCode-Right",
+        "Input": "Shift-KeyCode-D",
         "Sensitivity": 1
       }
     ],
@@ -110,7 +104,7 @@
     ],
     "Action-RotateHeadposeNegY": [
       {
-        "Input": "KeyCode-A",
+        "Input": "KeyCode-Left",
         "Sensitivity": 1
       }
     ],
@@ -122,19 +116,13 @@
     ],
     "Action-RotateHeadposePosY": [
       {
-        "Input": "KeyCode-D",
+        "Input": "KeyCode-Right",
         "Sensitivity": 1
       }
     ],
     "Action-RotateHeadposeX": [
       {
         "Input": "MouseMove-DeltaY",
-        "Sensitivity": 1
-      }
-    ],
-    "Action-RotateHeadposeZ": [
-      {
-        "Input": "MouseMove-ScrollWheelX",
         "Sensitivity": 1
       }
     ],
@@ -146,7 +134,7 @@
     ],
     "Action-RotateInputControllerNegY": [
       {
-        "Input": "Shift-KeyCode-D",
+        "Input": "Shift-KeyCode-Left",
         "Sensitivity": 1
       }
     ],
@@ -158,18 +146,15 @@
     ],
     "Action-RotateInputControllerPosY": [
       {
-        "Input": "Shift-KeyCode-A",
+        "Input": "Shift-KeyCode-Right",
         "Sensitivity": 1
       }
     ],
-    "ActionInputLabels": {
-      
-    },
-    "ActiveConfigurationPath": "C:\\Users\\cobyp\\Documents\\keep-searching-and-nobody-explodes\\KeySchema.mlscheme",
+    "ActiveConfigurationPath": "/Users/andres/workspace/keep-searching-and-nobody-explodes/KeySchema.mlscheme",
     "BindingsVersion": 2,
     "DeviceType": "keyboardMouse",
     "InputControllerID": 0,
-    "KeySensitivity": 1,
+    "KeySensitivity": 0.1000000014901161,
     "MaxRotation": 1,
     "MaxTranslation": 1,
     "MouseSensitivity-ScrollWheelY": -1,
