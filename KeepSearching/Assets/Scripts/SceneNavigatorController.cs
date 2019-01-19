@@ -7,6 +7,7 @@ public class SceneNavigatorController : MonoBehaviour
 {
 
     public string NextScene;
+    public string PreviousScene;
     public string AlternativeScene;
 
     private ControllerConnectionHandler _controllerConnectionHandler;
@@ -25,7 +26,7 @@ public class SceneNavigatorController : MonoBehaviour
     private void HandleOnTriggerDown(byte controllerId, float value)
     {
         MLInputController controller = _controllerConnectionHandler.ConnectedController;
-        if (controller != null && controller.Id == controllerId) {
+        if (controller != null && controller.Id == controllerId && !string.IsNullOrEmpty(NextScene)) {
             SceneManager.LoadScene(NextScene);
         }
     }
@@ -38,8 +39,13 @@ public class SceneNavigatorController : MonoBehaviour
     private void HandleOnButtonDown(byte controllerId, MLInputControllerButton button)
     {
         MLInputController controller = _controllerConnectionHandler.ConnectedController;
-        if (controller != null && controller.Id == controllerId && button == MLInputControllerButton.Bumper) {
-            SceneManager.LoadScene(AlternativeScene);
+        if (controller != null && controller.Id == controllerId) {
+            if (button == MLInputControllerButton.HomeTap && !string.IsNullOrEmpty(PreviousScene)) {
+                SceneManager.LoadScene(PreviousScene);
+            }
+            if (button == MLInputControllerButton.Bumper && !string.IsNullOrEmpty(AlternativeScene)) {
+                SceneManager.LoadScene(AlternativeScene);
+            }
         }
     }
 }
