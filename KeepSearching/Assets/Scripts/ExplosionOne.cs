@@ -37,6 +37,8 @@ public class ExplosionOne : MonoBehaviour {
         var jitterMax = jitter;
         var count = 0;
         var sourcePos = bomb.transform.position;
+        var bombRB = bomb.GetComponent<Rigidbody>();
+        bombRB.constraints = RigidbodyConstraints.FreezeAll;
         do {
             var jitterX = Random.Range(jitterMin, jitterMax);
             var jitterY = Random.Range(jitterMin, jitterMax) + fragYOffset;
