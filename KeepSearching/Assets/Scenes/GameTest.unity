@@ -113,6 +113,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &311510891 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1082968196093422, guid: fd8ef128a523847c98431c22359c5bc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1223423563}
+--- !u!114 &311510892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311510891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81830876481ce4800b4221da9a2bac28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPressed: 0
+  bumperPressed: 0
 --- !u!1 &353604038
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +614,11 @@ Prefab:
       propertyPath: PreviousScene
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114673828420358244, guid: fd8ef128a523847c98431c22359c5bc3,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd8ef128a523847c98431c22359c5bc3, type: 2}
   m_IsPrefabParent: 0
@@ -668,6 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c1d60237e84491e9e663b9d7f0e7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expControl: {fileID: 0}
   prefabArray:
   - {fileID: 1457274220029684, guid: 2478710f3f711490bb83f85d44154398, type: 2}
   - {fileID: 1457274220029684, guid: 2478710f3f711490bb83f85d44154398, type: 2}
@@ -787,7 +811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1883631547
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -22,12 +22,12 @@ public class ExplosionOne : MonoBehaviour {
 
         
 
-        if (expControl.buttonPressed)
+        if (expControl.bumperPressed)
         {
             InitialExplosion();
             //explodedOne = true;
         }
-        if (Input.GetKey(KeyCode.Return) && !explodedTwo)
+        if (expControl.buttonPressed)
         {
             SecondaryExplosion();
             explodedTwo = true;
