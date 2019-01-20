@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WireTrigger : MonoBehaviour {
+public class WireTrigger : MonoBehaviour
+{
+
+	public ExplosionOne Exploder;
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.FINDING_CUTTERS) {
+		if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSING) {
 //			if (other.CompareTag("GameController")) {
-				other.GetComponent<ExplosionOne>().Explode();
+				Exploder.Explode();
 				GameStateManager.instance.currentGamePhase = GameStateManager.Phase.DEFUSED;
 //			}
 		}

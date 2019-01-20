@@ -56,9 +56,9 @@ public class PickUp : MonoBehaviour {
     {
         print("Trigger collided object: " + collision.gameObject.name);
         objectInRange = collision.gameObject;
-        if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.FINDING_CUTTERS && collision.gameObject.name.Equals("wire")) {
+        if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSING && collision.gameObject.name.Equals("wire")) {
 //			if (other.CompareTag("GameController")) {
-            objectInRange.GetComponent<ExplosionOne>().Explode();
+            GetComponent<ExplosionOne>().Explode();
             GameStateManager.instance.currentGamePhase = GameStateManager.Phase.DEFUSED;
 //			}
         }
