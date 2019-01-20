@@ -5,7 +5,7 @@ public class GameStateManager : MonoBehaviour {
 
     public enum Phase
     {
-        PLACING_BOMB,ONBOARDING_P1,HIDING_CUTTERS,ACTIVATING_BOMB,ONBOARDING_P2
+        PLACING_BOMB,ONBOARDING_P1,HIDING_CUTTERS,ONBOARDING_P2,FINDING_CUTTERS
     }
 
     public static GameStateManager instance;
@@ -15,9 +15,14 @@ public class GameStateManager : MonoBehaviour {
         get { return _currentGamePhase; }
     }
 
-    public GameObject bomberHat
+    public GameObject BomberHatInstance
     {
-        get { return _propDropper._bomberHat; }
+        get { return _propDropper._bomberHatInstance; }
+    }
+
+    public GameObject DefuserHatInstance
+    {
+        get { return _propDropper._defuserHatInstance; }
     }
 
     private PropDropper _propDropper;

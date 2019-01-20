@@ -22,26 +22,32 @@ public class PropDropper : MonoBehaviour
     public Transform DefuserManualSpawnPos;
 
 
-    public GameObject _bomberHat;
-    public GameObject _bomberManual;
-    public GameObject _cutters;
+    public GameObject _bomberHatInstance;
+    public GameObject _bomberManualInstance;
+    public GameObject _cuttersInstance;
+    public GameObject _defuserHatInstance;
+    public GameObject _defuserManualInstance;
 
     public void DropProps(PropSet props)
     {
         switch (props) {
             case PropSet.BOMBER_ONBOARDING:
-                _bomberHat = Instantiate(BomberHat, BomberHatSpawnPos.position, Quaternion.identity);
-                _bomberManual = Instantiate(BomberManual, BomberManualSpawnPos.position, Quaternion.identity);
+                _bomberHatInstance = Instantiate(BomberHat, BomberHatSpawnPos.position, Quaternion.identity);
+                _bomberManualInstance = Instantiate(BomberManual, BomberManualSpawnPos.position, Quaternion.identity);
                 break;
             case PropSet.BOMBER_TOOLS:
-                _cutters = Instantiate(Cutters, CuttersSpawnPos.position, Quaternion.identity);
+                _cuttersInstance = Instantiate(Cutters, CuttersSpawnPos.position, Quaternion.identity);
+                break;
+            case PropSet.DEFUSER_ONBOARDING:
+                _defuserHatInstance = Instantiate(DefuserHat, DefuserHatSpawnPos.position, Quaternion.identity);
+                _defuserManualInstance = Instantiate(DefuserManual, DefuserManualSpawnPos.position, Quaternion.identity);
                 break;
         }
     }
 
     public void RemoveBomberOnboardingProps()
     {
-        if (_bomberHat != null) Destroy(_bomberHat);
-        if (_bomberManual != null) Destroy(_bomberManual);
+        if (_bomberHatInstance != null) Destroy(_bomberHatInstance);
+        if (_bomberManualInstance != null) Destroy(_bomberManualInstance);
     }
 }
