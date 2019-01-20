@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,6 +209,11 @@ Light:
 --- !u!224 &388279031 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224718498785304996, guid: 2b545b1660673493e9902a241e6f919a,
+    type: 2}
+  m_PrefabInternal: {fileID: 687384309}
+--- !u!1 &458868629 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1965595426488644, guid: 2b545b1660673493e9902a241e6f919a,
     type: 2}
   m_PrefabInternal: {fileID: 687384309}
 --- !u!1 &499963736
@@ -384,9 +389,7 @@ Prefab:
     - target: {fileID: 114016491592393776, guid: 2b545b1660673493e9902a241e6f919a,
         type: 2}
       propertyPath: m_Text
-      value: '[checkmark icon] [redo icon]
-
-        Error =  parameter turns red, beeps, haptic'
+      value: You're done! Please pass your headset to the other Player...
       objectReference: {fileID: 0}
     - target: {fileID: 114016491592393776, guid: 2b545b1660673493e9902a241e6f919a,
         type: 2}
@@ -400,6 +403,60 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b545b1660673493e9902a241e6f919a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &800182611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 800182612}
+  - component: {fileID: 800182614}
+  - component: {fileID: 800182613}
+  m_Layer: 0
+  m_Name: wire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &800182612
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800182611}
+  m_LocalRotation: {x: 0.08187207, y: 0.08116235, z: 0.7054433, w: 0.69932795}
+  m_LocalPosition: {x: -0.098, y: 0.004, z: 0.004}
+  m_LocalScale: {x: 1.3385732, y: 1.5504425, z: 1.0000012}
+  m_Children: []
+  m_Father: {fileID: 1083355785}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 13.240001, z: 90.499}
+--- !u!114 &800182613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800182611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9574d47050c641f0b2a9bb230bb3cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &800182614
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800182611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.03
+  m_Height: 0.15
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &965348744
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +748,6 @@ MonoBehaviour:
   controllerBody: {fileID: 1199513558}
   objectInRange: {fileID: 0}
   grabControl: {fileID: 1223423566}
-  isPlayerTwo: 0
 --- !u!135 &1223423568
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -743,11 +799,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dbb8848ce6d04da891c75a5a13c9aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombPlace: Drop Bomb
+  bombPlace: 
   grabP1: 
-  hatOn: Put on Hat
+  hatOn: 
   wcPlace: Place Wire Cutters
-  touchBomb: Touch Bomb
+  touchBomb: 
   grabP2: 
   wcCollect: Find Wire Cutters
   bombDiff: Touch Bomb
@@ -955,6 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d321ebf93774387b18b18664a80373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeadPoseCanvas: {fileID: 458868629}
 --- !u!4 &1439552981
 Transform:
   m_ObjectHideFlags: 0

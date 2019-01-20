@@ -6,6 +6,7 @@ TagManager:
   tags:
   - object
   - bomb
+  - cutters
   layers:
   - Default
   - TransparentFX

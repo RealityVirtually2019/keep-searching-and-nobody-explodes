@@ -24,7 +24,7 @@ public class TextManager : MonoBehaviour {
         canvasArray[7] = bombDiff;
         canvasArray[8] = diff;
         canvasArray[9] = switchP; 
-        canvasArray[10] = boom;
+//        canvasArray[10] = boom;
 
 
 
