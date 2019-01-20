@@ -11,10 +11,8 @@ public class GameStateManager : MonoBehaviour {
     public static GameStateManager instance;
     public Phase currentGamePhase
     {
-        set
-        {
-            HandleGamePhaseChange(_currentGamePhase, value);
-        }
+        set { HandleGamePhaseChange(_currentGamePhase, value); }
+        get { return _currentGamePhase; }
     }
 
     private PropDropper _propDropper;
@@ -42,16 +40,12 @@ public class GameStateManager : MonoBehaviour {
     private Phase _currentGamePhase;
 
     void Awake () {
-        if(!instance) {
+        if (!instance) {
             instance = this;
             DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
         _propDropper = GetComponent<PropDropper>();
     }
 }

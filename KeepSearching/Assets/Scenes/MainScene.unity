@@ -512,6 +512,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1199513558 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4738724065587790, guid: fd8ef128a523847c98431c22359c5bc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1223423563}
 --- !u!1001 &1223423563
 Prefab:
   m_ObjectHideFlags: 0
@@ -623,6 +628,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bomb: {fileID: 1083355781}
   MeshParent: {fileID: 499963736}
+--- !u!114 &1223423566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223423564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797a9afa309514313b4e956c0068563b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerPressed: 0
+--- !u!114 &1223423567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223423564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4655cfe163394fd582c4b42fe833a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 2072589437}
+  controllerBody: {fileID: 1199513558}
+  objectInRange: {fileID: 0}
+  grabControl: {fileID: 1223423566}
+  isPlayerTwo: 0
+--- !u!135 &1223423568
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223423564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09088489
+  m_Center: {x: 0, y: 0, z: 0.04229135}
 --- !u!1 &1294052462
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,3 +985,8 @@ Camera:
   m_StereoSeparation: 0.062
   m_StabilizationDistance: 0
   m_StabilizationMode: 0
+--- !u!4 &2072589437 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4720202184391992, guid: fd8ef128a523847c98431c22359c5bc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1223423563}

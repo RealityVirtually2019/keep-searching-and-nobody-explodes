@@ -69,6 +69,7 @@ public class PickUp : MonoBehaviour {
     //Create Vector 3 for controller position that keeps object at certain distance from controller
     void HoldObject(GameObject obj)
     {
+        if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.PLACING_BOMB) return;
         if (objectHeld == null)
         {
             objectHeld = obj;
@@ -87,7 +88,7 @@ public class PickUp : MonoBehaviour {
         if (objectHeld != null)
         {
             Rigidbody rb = objectHeld.GetComponent<Rigidbody>();
-            //rb.useGravity = true;
+            rb.useGravity = true;
             objectHeld = null;
         }
     }

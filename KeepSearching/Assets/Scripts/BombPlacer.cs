@@ -32,7 +32,8 @@ public class BombPlacer : MonoBehaviour
     private void HandleOnTriggerDown(byte controllerId, float value)
     {
         MLInputController controller = _controllerConnectionHandler.ConnectedController;
-        if (controller != null && controller.Id == controllerId && Bomb != null) {
+        if (controller != null && controller.Id == controllerId && Bomb != null
+                && GameStateManager.instance.currentGamePhase == GameStateManager.Phase.PLACING_BOMB) {
             Bomb.transform.SetParent(MeshParent.transform);
             var rb = Bomb.GetComponent<Rigidbody>();
             rb.useGravity = true;
@@ -51,7 +52,8 @@ public class BombPlacer : MonoBehaviour
     {
         MLInputController controller = _controllerConnectionHandler.ConnectedController;
         if (controller != null && controller.Id == controllerId) {
-            if (button == MLInputControllerButton.HomeTap) {
+            if (button == MLInputControllerButton.HomeTap
+                    && GameStateManager.instance.currentGamePhase == GameStateManager.Phase.ONBOARDING_P1) {
                 Bomb.transform.SetParent(transform);
                 var rb = Bomb.GetComponent<Rigidbody>();
                 rb.AddForce(Vector3.zero);

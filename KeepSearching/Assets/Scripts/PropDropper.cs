@@ -39,7 +39,7 @@ public class PropDropper : MonoBehaviour
 
     public void RemoveBomberOnboardingProps()
     {
-        Destroy(_bomberHat);
-        Destroy(_bomberManual);
+        if (_bomberHat != null) Destroy(_bomberHat);
+        if (_bomberManual != null) Destroy(_bomberManual);
     }
 }
