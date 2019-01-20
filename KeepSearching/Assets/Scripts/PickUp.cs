@@ -33,7 +33,9 @@ public class PickUp : MonoBehaviour {
             if (objectInRange.tag == "cutters")
             {
                 objectInRange.transform.SetParent(controller);
-                objectInRange.GetComponent<Rigidbody>().useGravity = false;
+                var rb = objectInRange.GetComponent<Rigidbody>();
+                rb.useGravity = false;
+                rb.isKinematic = true;
                 objectInRange.transform.position = controller.position;
             }
         }

@@ -39,10 +39,15 @@ public class PropDropper : MonoBehaviour
                 _cuttersInstance = Instantiate(Cutters, CuttersSpawnPos.position, Quaternion.identity);
                 break;
             case PropSet.DEFUSER_ONBOARDING:
-                _defuserHatInstance = Instantiate(DefuserHat, DefuserHatSpawnPos.position, Quaternion.identity);
-                _defuserManualInstance = Instantiate(DefuserManual, DefuserManualSpawnPos.position, Quaternion.identity);
+                Invoke("DropDefuserProps", 2);
                 break;
         }
+    }
+
+    void DropDefuserProps()
+    {
+        _defuserHatInstance = Instantiate(DefuserHat, DefuserHatSpawnPos.position, Quaternion.identity);
+        _defuserManualInstance = Instantiate(DefuserManual, DefuserManualSpawnPos.position, Quaternion.identity);
     }
 
     public void RemoveBomberOnboardingProps()
