@@ -192,12 +192,57 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107089491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.334, y: 0.228, z: -0.143}
-  m_LocalScale: {x: 0.184615, y: 0.184615, z: 0.184615}
+  m_LocalPosition: {x: 0.033, y: 0.5, z: 0.86100006}
+  m_LocalScale: {x: 0.21676426, y: 0.21676427, z: 0.21676427}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &286535623 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1082968196093422, guid: fd8ef128a523847c98431c22359c5bc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1223423563}
+--- !u!114 &286535624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286535623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797a9afa309514313b4e956c0068563b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerPressed: 0
+--- !u!135 &286535629
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286535623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09088489
+  m_Center: {x: 0, y: 0, z: 0.04229135}
+--- !u!114 &286535630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286535623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4655cfe163394fd582c4b42fe833a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1312975796}
+  controllerBody: {fileID: 1426191417}
+  objectInRange: {fileID: 0}
+  grabControl: {fileID: 286535624}
+  isPlayerTwo: 0
 --- !u!1 &353604038
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +573,11 @@ Prefab:
       propertyPath: NextScene
       value: OnboardingP2
       objectReference: {fileID: 0}
+    - target: {fileID: 114673828420358244, guid: fd8ef128a523847c98431c22359c5bc3,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd8ef128a523847c98431c22359c5bc3, type: 2}
   m_IsPrefabParent: 0
@@ -621,7 +671,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1726235943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c111f18615d7145f7b4213750616260d, type: 3}
   m_Name: 
@@ -629,6 +679,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   controller: {fileID: 1312975796}
   controllerBody: {fileID: 1426191417}
+  objectGrabbed: 0
 --- !u!54 &1726235947
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -643,7 +694,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1726235948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -742,11 +793,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c2d9ce7f2c4174ba9b7950fec47278a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.043999963
+      value: 0.687
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c2d9ce7f2c4174ba9b7950fec47278a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.084999956
+      value: 0.855
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c2d9ce7f2c4174ba9b7950fec47278a4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -791,6 +842,10 @@ Prefab:
     - target: {fileID: 2300002, guid: c2d9ce7f2c4174ba9b7950fec47278a4, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c2d9ce7f2c4174ba9b7950fec47278a4, type: 3}
+      propertyPath: m_TagString
+      value: object
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2d9ce7f2c4174ba9b7950fec47278a4, type: 3}
