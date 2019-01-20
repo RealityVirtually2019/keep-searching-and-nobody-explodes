@@ -156,7 +156,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Lumin: com.mit.keepsearching
+    Lumin: com.aornelas.keepsearching
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -276,6 +276,9 @@ PlayerSettings:
     m_DynamicBatching: 0
   - m_BuildTarget: WebGL
     m_StaticBatching: 0
+    m_DynamicBatching: 0
+  - m_BuildTarget: Lumin
+    m_StaticBatching: 1
     m_DynamicBatching: 0
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
@@ -686,6 +689,7 @@ PlayerSettings:
     m_VersionName: 
   luminPrivilege:
   - ControllerPose
+  - WorldReconstruction
   luminMinimumPlatformAPILevel: 3
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 3
