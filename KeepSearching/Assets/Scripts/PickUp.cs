@@ -10,7 +10,6 @@ public class PickUp : MonoBehaviour {
     public  GameObject objectInRange;
     private GameObject objectHeld;
     public GrabController grabControl;
-    public bool isPlayerTwo;
     Vector3 controllerPosition;
 
         void Start()
@@ -25,17 +24,17 @@ public class PickUp : MonoBehaviour {
         {
             ReleaseObject();
         }
-        else if(objectInRange != null)
+        else if(objectInRange != null && grabControl.triggerPressed)
         {
-            if (objectInRange.tag == "object" && grabControl.triggerPressed)
+            if (objectInRange.tag == "object")
             {
                 HoldObject(objectInRange);
-                if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.ONBOARDING_P1) {
-                }
             }
-            if (objectInRange.tag == "wirecutters")
+            if (objectInRange.tag == "cutters")
             {
-                // TODO: inherit object into controller hierarchy and signal defusing mode
+                objectInRange.transform.SetParent(controller);
+                objectInRange.GetComponent<Rigidbody>().useGravity = false;
+                objectInRange.transform.position = controller.position;
             }
         }
 

@@ -43,6 +43,7 @@ public class GameStateManager : MonoBehaviour {
                     break;
                 case Phase.ONBOARDING_P2:
                     _propDropper.DropProps(PropDropper.PropSet.DEFUSER_ONBOARDING);
+                    _propDropper.PrepareCutters();
                     break;
         }
     }

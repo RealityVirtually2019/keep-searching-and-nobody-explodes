@@ -50,4 +50,11 @@ public class PropDropper : MonoBehaviour
         if (_bomberHatInstance != null) Destroy(_bomberHatInstance);
         if (_bomberManualInstance != null) Destroy(_bomberManualInstance);
     }
+
+    public void PrepareCutters()
+    {
+        if (_cuttersInstance != null) {
+            _cuttersInstance.tag = "cutters";
+        }
+    }
 }
