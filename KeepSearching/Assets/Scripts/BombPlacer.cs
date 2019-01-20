@@ -10,16 +10,13 @@ public class BombPlacer : MonoBehaviour
 
     private ControllerConnectionHandler _controllerConnectionHandler;
 
-    private void Awake()
-    {
-        GameStateManager.instance.currentGamePhase = GameStateManager.Phase.PLACING_BOMB;
-    }
-
     // Use this for initialization
     void Start () {
         _controllerConnectionHandler = GetComponent<ControllerConnectionHandler>();
         MLInput.OnTriggerDown += HandleOnTriggerDown;
         MLInput.OnControllerButtonDown += HandleOnButtonDown;
+
+        GameStateManager.instance.currentGamePhase = GameStateManager.Phase.PLACING_BOMB;
     }
 
     // Update is called once per frame

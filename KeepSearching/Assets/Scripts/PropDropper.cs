@@ -21,15 +21,25 @@ public class PropDropper : MonoBehaviour
     public GameObject DefuserManual;
     public Transform DefuserManualSpawnPos;
 
+
+    private GameObject _bomberHat;
+    private GameObject _bomberManual;
+
     public void DropProps(PropSet props)
     {
         switch (props) {
             case PropSet.BOMBER_ONBOARDING:
-                var bomberHat = Instantiate(BomberHat, BomberHatSpawnPos.position, Quaternion.identity);
-                var bomberManual = Instantiate(BomberManual, BomberManualSpawnPos.position, Quaternion.identity);
+                _bomberHat = Instantiate(BomberHat, BomberHatSpawnPos.position, Quaternion.identity);
+                _bomberManual = Instantiate(BomberManual, BomberManualSpawnPos.position, Quaternion.identity);
                 break;
             case PropSet.BOMBER_TOOLS:
                     break;
         }
+    }
+
+    public void RemoveBomberOnboardingProps()
+    {
+        Destroy(_bomberHat);
+        Destroy(_bomberManual);
     }
 }

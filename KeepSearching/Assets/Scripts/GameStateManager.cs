@@ -25,6 +25,7 @@ public class GameStateManager : MonoBehaviour {
         _currentGamePhase = to;
         switch (_currentGamePhase) {
                 case Phase.PLACING_BOMB:
+                    _propDropper.RemoveBomberOnboardingProps();
                     break;
                 case Phase.ONBOARDING_P1:
                     _propDropper.DropProps(PropDropper.PropSet.BOMBER_ONBOARDING);
