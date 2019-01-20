@@ -393,6 +393,10 @@ Prefab:
       propertyPath: m_FontData.m_FontSize
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1965595426488644, guid: 2b545b1660673493e9902a241e6f919a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b545b1660673493e9902a241e6f919a, type: 2}
   m_IsPrefabParent: 0
