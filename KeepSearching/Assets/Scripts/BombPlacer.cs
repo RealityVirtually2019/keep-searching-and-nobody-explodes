@@ -10,6 +10,11 @@ public class BombPlacer : MonoBehaviour
 
     private ControllerConnectionHandler _controllerConnectionHandler;
 
+    private void Awake()
+    {
+        GameStateManager.instance.currentGamePhase = GameStateManager.Phase.PLACING_BOMB;
+    }
+
     // Use this for initialization
     void Start () {
         _controllerConnectionHandler = GetComponent<ControllerConnectionHandler>();
@@ -36,7 +41,7 @@ public class BombPlacer : MonoBehaviour
             rb.useGravity = true;
             rb.isKinematic = false;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
-
+            GameStateManager.instance.currentGamePhase = GameStateManager.Phase.ONBOARDING_P1;
         }
     }
 
@@ -57,10 +62,8 @@ public class BombPlacer : MonoBehaviour
                 rb.isKinematic = true;
                 rb.constraints = RigidbodyConstraints.None;
                 Bomb.transform.position = Bomb.transform.parent.position;
+                GameStateManager.instance.currentGamePhase = GameStateManager.Phase.PLACING_BOMB;
             }
-//            if (button == MLInputControllerButton.Bumper && !string.IsNullOrEmpty(AlternativeScene)) {
-//                SceneManager.LoadScene(AlternativeScene);
-//            }
         }
     }
 }

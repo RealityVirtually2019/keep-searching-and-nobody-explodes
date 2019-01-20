@@ -213,6 +213,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &608595834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 608595835}
+  m_Layer: 0
+  m_Name: BomberHatSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &608595835
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608595834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.241, y: 0.247, z: 0.181}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1083355785}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &687384309
 Prefab:
   m_ObjectHideFlags: 0
@@ -383,6 +411,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 169.964
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+      propertyPath: m_TagString
+      value: bomb
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
   m_IsPrefabParent: 0
@@ -417,6 +449,10 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 16
   m_CollisionDetection: 2
+--- !u!4 &1083355785 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 4d0b28857b28f4604b1f44bc0379d77e, type: 3}
+  m_PrefabInternal: {fileID: 1083355780}
 --- !u!1 &1140412357
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +685,69 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1294052462}
+--- !u!1 &1439552979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1439552981}
+  - component: {fileID: 1439552980}
+  - component: {fileID: 1439552982}
+  m_Layer: 0
+  m_Name: GameStateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1439552980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439552979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d321ebf93774387b18b18664a80373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1439552981
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439552979}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.64812577, y: -0.3213507, z: -0.048702277}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439552982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439552979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ef7bc7b50214f539d4e7f445ba7371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anchor: {fileID: 1083355785}
+  BomberHat: {fileID: 100000, guid: c2afa9bdee0d0462d97e9fa87c5cca06, type: 3}
+  BomberHatSpawnPos: {fileID: 608595835}
+  BomberManual: {fileID: 0}
+  BomberManualSpawnPos: {fileID: 0}
+  Cutters: {fileID: 0}
+  CuttersSpawnPos: {fileID: 0}
+  DefuserHat: {fileID: 0}
+  DefuserHatSpawnPos: {fileID: 0}
+  DefuserManual: {fileID: 0}
+  DefuserManualSpawnPos: {fileID: 0}
 --- !u!1001 &1467951922
 Prefab:
   m_ObjectHideFlags: 0
