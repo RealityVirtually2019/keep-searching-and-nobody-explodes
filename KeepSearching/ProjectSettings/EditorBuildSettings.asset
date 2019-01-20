@@ -8,4 +8,34 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 62e0ebb315d8aa947b0a617eaed3009f
+  - enabled: 1
+    path: Assets/Scenes/OnboardingP1.unity
+    guid: 6417651e6db254f2cbb33b2db8d6bae8
+  - enabled: 1
+    path: Assets/Scenes/BombPlacement.unity
+    guid: 7ba1bd5f19bf0403ab174d85870d202a
+  - enabled: 1
+    path: Assets/Scenes/WireCutterPlacement.unity
+    guid: 1dbd0f5e362dc41fbba1d6bce8994017
+  - enabled: 1
+    path: Assets/Scenes/OnboardingP2.unity
+    guid: 8c629ee77adb14b228ec4b79a56395bf
+  - enabled: 1
+    path: Assets/Scenes/WireCutterCollection.unity
+    guid: 07dc33cb21f524057b8856fc799f791b
+  - enabled: 1
+    path: Assets/Scenes/BombDiffusion.unity
+    guid: eafcb29329aa746daa9faa3d3d1137fd
+  - enabled: 1
+    path: Assets/Scenes/Diffused.unity
+    guid: 3effbff3264234add9971a2903c1d4b7
+  - enabled: 1
+    path: Assets/Scenes/SwitchPlayers.unity
+    guid: c92fb6b759d204670851d54b71ea9e53
+  - enabled: 1
+    path: Assets/Scenes/Boom.unity
+    guid: b63e2948688f4457cabcdc37e2c7bc2b
   m_configObjects: {}

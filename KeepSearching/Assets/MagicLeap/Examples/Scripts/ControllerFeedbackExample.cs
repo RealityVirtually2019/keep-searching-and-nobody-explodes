@@ -149,7 +149,7 @@ namespace MagicLeap
                 button == MLInputControllerButton.Bumper)
             {
                 // Demonstrate haptics using callbacks.
-                controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.ForceUp, MLInputControllerFeedbackIntensity.Medium);
+//                controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.ForceUp, MLInputControllerFeedbackIntensity.Medium);
             }
         }
 
@@ -163,8 +163,9 @@ namespace MagicLeap
             MLInputController controller = _controllerConnectionHandler.ConnectedController;
             if (controller != null && controller.Id == controllerId)
             {
-                MLInputControllerFeedbackIntensity intensity = (MLInputControllerFeedbackIntensity)((int)(value * 2.0f));
-                controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.Buzz, intensity);
+//                MLInputControllerFeedbackIntensity intensity = (MLInputControllerFeedbackIntensity)((int)(value * 2.0f));
+//                controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.Buzz, MLInputControllerFeedbackIntensity.High);
+                controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.ForceDown, MLInputControllerFeedbackIntensity.Medium);
             }
         }
         #endregion
