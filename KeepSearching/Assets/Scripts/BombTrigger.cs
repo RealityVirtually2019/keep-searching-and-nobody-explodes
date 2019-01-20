@@ -6,6 +6,7 @@ public class BombTrigger : MonoBehaviour {
         if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.HIDING_CUTTERS) {
             if (other.CompareTag("GameController")) {
                 other.GetComponent<ExplosionOne>().Explode();
+                GameStateManager.instance.currentGamePhase = GameStateManager.Phase.ONBOARDING_P2;
             }
         }
     }
