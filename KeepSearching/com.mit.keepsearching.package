@@ -6,3 +6,6 @@ USES = \
 
 
 ######### DO NOT EDIT ABOVE #########
+
+DATAS = \
+	ExampleMusicProvider : bin/ \
