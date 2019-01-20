@@ -5,10 +5,17 @@ public class GameStateManager : MonoBehaviour {
 
     public enum Phase
     {
-        PLACING_BOMB,ONBOARDING_P1,HIDING_CUTTERS,ONBOARDING_P2,FINDING_CUTTERS
+        PLACING_BOMB,ONBOARDING_P1,HIDING_CUTTERS,ONBOARDING_P2,FINDING_CUTTERS,DEFUSING,DEFUSED
     }
 
     public static GameStateManager instance;
+    public GameObject HeadPoseCanvas;
+
+    public void HideHeadPoseCanvas()
+    {
+        HeadPoseCanvas.SetActive(false);
+    }
+
     public Phase currentGamePhase
     {
         set { HandleGamePhaseChange(_currentGamePhase, value); }
@@ -44,6 +51,7 @@ public class GameStateManager : MonoBehaviour {
                 case Phase.ONBOARDING_P2:
                     _propDropper.DropProps(PropDropper.PropSet.DEFUSER_ONBOARDING);
                     _propDropper.PrepareCutters();
+                    HeadPoseCanvas.SetActive(true);
                     break;
         }
     }

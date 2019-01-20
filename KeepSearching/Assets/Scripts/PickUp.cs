@@ -37,6 +37,7 @@ public class PickUp : MonoBehaviour {
                 rb.useGravity = false;
                 rb.isKinematic = true;
                 objectInRange.transform.position = controller.position;
+                GameStateManager.instance.currentGamePhase = GameStateManager.Phase.DEFUSING;
             }
         }
 

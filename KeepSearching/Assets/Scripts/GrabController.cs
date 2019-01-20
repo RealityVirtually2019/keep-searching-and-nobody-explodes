@@ -35,6 +35,10 @@ public class GrabController : MonoBehaviour {
             {
                 triggerPressed = true;
                 Debug.Log("Trigger State: " + triggerPressed);
+                if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.ONBOARDING_P2
+                        || GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSED) {
+                    GameStateManager.instance.HideHeadPoseCanvas();
+                }
             }
             else
             {

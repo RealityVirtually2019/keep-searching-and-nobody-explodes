@@ -47,10 +47,10 @@ public class TextManager : MonoBehaviour {
                 state = 3;
                 ChangeCanvasText(state);
                 break;
-            case GameStateManager.Phase.ACTIVATING_BOMB:
-                state = 4;
-                ChangeCanvasText(state);
-                break;
+//            case GameStateManager.Phase.ACTIVATING_BOMB:
+//                state = 4;
+//                ChangeCanvasText(state);
+//                break;
             case GameStateManager.Phase.ONBOARDING_P2:
                 state = 6;
                 ChangeCanvasText(state);
