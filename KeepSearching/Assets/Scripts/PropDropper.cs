@@ -26,6 +26,7 @@ public class PropDropper : MonoBehaviour
         switch (props) {
             case PropSet.BOMBER_ONBOARDING:
                 var bomberHat = Instantiate(BomberHat, BomberHatSpawnPos.position, Quaternion.identity);
+                var bomberManual = Instantiate(BomberManual, BomberManualSpawnPos.position, Quaternion.identity);
                 break;
             case PropSet.BOMBER_TOOLS:
                     break;

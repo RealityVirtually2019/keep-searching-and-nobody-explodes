@@ -235,7 +235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 608595834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.241, y: 0.247, z: 0.181}
+  m_LocalPosition: {x: 0.214, y: 0.247, z: 0.192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1083355785}
@@ -368,6 +368,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b545b1660673493e9902a241e6f919a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &965348744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 965348745}
+  m_Layer: 0
+  m_Name: BomberManualSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &965348745
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965348744}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.148, y: 0.247, z: 0.268}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 1083355785}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1083355780
 Prefab:
   m_ObjectHideFlags: 0
@@ -685,6 +713,34 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1294052462}
+--- !u!1 &1402440686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1402440687}
+  m_Layer: 0
+  m_Name: CuttersSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402440687
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402440686}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.084, y: 0.247, z: 0.209}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 1083355785}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1439552979
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,16 +794,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anchor: {fileID: 1083355785}
-  BomberHat: {fileID: 100000, guid: c2afa9bdee0d0462d97e9fa87c5cca06, type: 3}
+  BomberHat: {fileID: 1652754017160058, guid: b1c59a219432649e98cbe27d7dee6ab6, type: 2}
   BomberHatSpawnPos: {fileID: 608595835}
-  BomberManual: {fileID: 0}
-  BomberManualSpawnPos: {fileID: 0}
-  Cutters: {fileID: 0}
-  CuttersSpawnPos: {fileID: 0}
-  DefuserHat: {fileID: 0}
-  DefuserHatSpawnPos: {fileID: 0}
+  BomberManual: {fileID: 1469915481237970, guid: e0e047fd0efad4463a63eb3a4fbbc7df,
+    type: 2}
+  BomberManualSpawnPos: {fileID: 965348745}
+  Cutters: {fileID: 1335558834704600, guid: d8f04327431a24551b2b546fb3b78d0e, type: 2}
+  CuttersSpawnPos: {fileID: 1402440687}
+  DefuserHat: {fileID: 1855151541388398, guid: 353f4a73c2ca14cf084f36577f2720e7, type: 2}
+  DefuserHatSpawnPos: {fileID: 608595835}
   DefuserManual: {fileID: 0}
-  DefuserManualSpawnPos: {fileID: 0}
+  DefuserManualSpawnPos: {fileID: 965348745}
 --- !u!1001 &1467951922
 Prefab:
   m_ObjectHideFlags: 0
