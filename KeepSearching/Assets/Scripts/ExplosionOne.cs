@@ -1,44 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ExplosionOne : MonoBehaviour {
 
-    public ExplosionController expControl;
     public GameObject[] prefabArray;
     public GameObject bomb;
     public int burstCount = 20;
-    public bool explodedOne;
+    public float fragMass = 1.0f;
+    public float fragDrag = 2.0f;
+    public float fragYOffset = 0.15f;
     public float radius = 5.0F;
-    public float power = 10.0F;
-    public bool explodedTwo;
+    public float power = 5.0F;
+    public float jitter = 0.25f;
 
-    // Use this for initialization
-    void Start () {
-
-    }
-
-    // Update is called once per frame
-    void Update () {
-        if (expControl.bumperPressed && !explodedOne)
-        {
-            InitialExplosion();
-            explodedOne = true;
-        }
-        if (expControl.buttonPressed && !explodedTwo)
-        {
-            SecondaryExplosion();
-            explodedTwo = true;
-        }
-
-    }
-
-    void InitialExplosion()
+    public void InitialExplosion()
     {
         Explode();
     }
 
-    void SecondaryExplosion()
+    public void SecondaryExplosion()
     {
         Explode();
 //        var explosionPos = bomb.transform.position;
@@ -52,24 +31,29 @@ public class ExplosionOne : MonoBehaviour {
 //        }
     }
 
-    private void Explode()
+    public void Explode()
     {
+        var jitterMin = jitter * -1;
+        var jitterMax = jitter;
         var count = 0;
-        var explosionPos = bomb.transform.position;
+        var sourcePos = bomb.transform.position;
         do {
-            foreach (var prefab in prefabArray) {
-                if (count >= burstCount) continue;
-                var frag = Instantiate(prefab, explosionPos, Quaternion.identity);
+            var jitterX = Random.Range(jitterMin, jitterMax);
+            var jitterY = Random.Range(jitterMin, jitterMax) + fragYOffset;
+            var jitterZ = Random.Range(jitterMin, jitterMax);
+            var myPos = new Vector3(sourcePos.x + jitterX, sourcePos.y + jitterY, sourcePos.z + jitterZ);
+            var fragIndex = Random.Range(0, prefabArray.Length);
+            var frag = Instantiate(prefabArray[fragIndex], myPos, Quaternion.identity);
 
-                frag.AddComponent<Rigidbody>();
-                //frag.AddComponent<BoxCollider>(); // Done manually
-                frag.AddComponent<DestroyFragment>();
+            frag.AddComponent<Rigidbody>();
+            //frag.AddComponent<BoxCollider>(); // Done manually
+            frag.AddComponent<DestroyFragment>();
 
-                var rb = frag.GetComponent<Rigidbody>();
-                rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
-                rb.drag = 2f;
-                count++;
-            }
+            var rb = frag.GetComponent<Rigidbody>();
+            rb.AddExplosionForce(power, myPos, radius, 3.0F);
+            rb.mass = fragMass;
+            rb.drag = fragDrag;
+            count++;
         } while (count < burstCount);
     }
 }

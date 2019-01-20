@@ -129,8 +129,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81830876481ce4800b4221da9a2bac28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPressed: 0
-  bumperPressed: 0
+--- !u!114 &311510893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311510891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c1d60237e84491e9e663b9d7f0e7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabArray:
+  - {fileID: 1285121568806836, guid: f1bab2fe469ce4dbc958ea86238f3ca4, type: 2}
+  - {fileID: 1104369949765764, guid: 2988b9144e55d47d19951364a9a833f3, type: 2}
+  - {fileID: 1501455196981222, guid: b3234729415af4aea8132d252ed37806, type: 2}
+  bomb: {fileID: 1488359715}
+  burstCount: 20
+  fragMass: 10
+  fragDrag: 2
+  fragYOffset: 0.15
+  radius: 1
+  power: 0
+  jitter: 0.25
 --- !u!1 &353604038
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,50 +640,12 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1082968196093422, guid: fd8ef128a523847c98431c22359c5bc3, type: 2}
+      propertyPath: m_Name
+      value: ExplosionController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd8ef128a523847c98431c22359c5bc3, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1302909847
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497759269677098, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2478710f3f711490bb83f85d44154398, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1488359715
 GameObject:
@@ -672,7 +655,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1488359717}
-  - component: {fileID: 1488359716}
   m_Layer: 0
   m_Name: PointOfOrigin
   m_TagString: Untagged
@@ -680,34 +662,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1488359716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1488359715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1c1d60237e84491e9e663b9d7f0e7e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expControl: {fileID: 311510892}
-  prefabArray:
-  - {fileID: 1457274220029684, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-  - {fileID: 1457274220029684, guid: 2478710f3f711490bb83f85d44154398, type: 2}
-  - {fileID: 1657017934810840, guid: f8bcd1639cbfa4534873bac735246e40, type: 2}
-  - {fileID: 1657017934810840, guid: f8bcd1639cbfa4534873bac735246e40, type: 2}
-  - {fileID: 1031203496461710, guid: 326abfe0f10074606b4586f58b80f087, type: 2}
-  - {fileID: 1031203496461710, guid: 326abfe0f10074606b4586f58b80f087, type: 2}
-  - {fileID: 1031203496461710, guid: 326abfe0f10074606b4586f58b80f087, type: 2}
-  - {fileID: 1031203496461710, guid: 326abfe0f10074606b4586f58b80f087, type: 2}
-  - {fileID: 1031203496461710, guid: 326abfe0f10074606b4586f58b80f087, type: 2}
-  - {fileID: 1031203496461710, guid: 326abfe0f10074606b4586f58b80f087, type: 2}
-  bomb: {fileID: 1488359715}
-  explodedOne: 0
-  radius: 5
-  power: 1000
-  explodedTwo: 0
 --- !u!4 &1488359717
 Transform:
   m_ObjectHideFlags: 0
