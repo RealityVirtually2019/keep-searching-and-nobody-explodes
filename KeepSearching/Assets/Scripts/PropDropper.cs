@@ -22,8 +22,9 @@ public class PropDropper : MonoBehaviour
     public Transform DefuserManualSpawnPos;
 
 
-    private GameObject _bomberHat;
-    private GameObject _bomberManual;
+    public GameObject _bomberHat;
+    public GameObject _bomberManual;
+    public GameObject _cutters;
 
     public void DropProps(PropSet props)
     {
@@ -33,7 +34,8 @@ public class PropDropper : MonoBehaviour
                 _bomberManual = Instantiate(BomberManual, BomberManualSpawnPos.position, Quaternion.identity);
                 break;
             case PropSet.BOMBER_TOOLS:
-                    break;
+                _cutters = Instantiate(Cutters, CuttersSpawnPos.position, Quaternion.identity);
+                break;
         }
     }
 

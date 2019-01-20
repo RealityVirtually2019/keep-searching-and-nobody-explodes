@@ -15,6 +15,11 @@ public class GameStateManager : MonoBehaviour {
         get { return _currentGamePhase; }
     }
 
+    public GameObject bomberHat
+    {
+        get { return _propDropper._bomberHat; }
+    }
+
     private PropDropper _propDropper;
 
     private void HandleGamePhaseChange(Phase from, Phase to)

@@ -30,6 +30,8 @@ public class PickUp : MonoBehaviour {
             if (objectInRange.tag == "object" && grabControl.triggerPressed)
             {
                 HoldObject(objectInRange);
+                if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.ONBOARDING_P1) {
+                }
             }
             if (objectInRange.tag == "wirecutters")
             {

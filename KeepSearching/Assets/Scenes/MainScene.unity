@@ -878,6 +878,9 @@ MonoBehaviour:
   DefuserHatSpawnPos: {fileID: 608595835}
   DefuserManual: {fileID: 0}
   DefuserManualSpawnPos: {fileID: 965348745}
+  _bomberHat: {fileID: 0}
+  _bomberManual: {fileID: 0}
+  _cutters: {fileID: 0}
 --- !u!1001 &1467951922
 Prefab:
   m_ObjectHideFlags: 0
@@ -954,6 +957,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1867298248}
   - component: {fileID: 1867298249}
+  - component: {fileID: 1867298250}
+  - component: {fileID: 1867298251}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1013,6 +1018,29 @@ Camera:
   m_StereoSeparation: 0.062
   m_StabilizationDistance: 0
   m_StabilizationMode: 0
+--- !u!135 &1867298250
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867298247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1867298251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867298247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b91b6f7c145b8a49a4c6f14b9b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2072589437 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4720202184391992, guid: fd8ef128a523847c98431c22359c5bc3,
