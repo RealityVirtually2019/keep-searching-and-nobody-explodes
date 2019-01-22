@@ -12,11 +12,6 @@ public class PickUp : MonoBehaviour {
     public GrabController grabControl;
     Vector3 controllerPosition;
 
-        void Start()
-    {
-      
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -58,16 +53,19 @@ public class PickUp : MonoBehaviour {
     {
         print("Trigger collided object: " + collision.gameObject.name);
         objectInRange = collision.gameObject;
-        if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.HIDING_CUTTERS
-                && collision.gameObject.CompareTag("GameController")) {
-            collision.gameObject.GetComponent<ExplosionOne>().Explode();
-            GameStateManager.instance.currentGamePhase = GameStateManager.Phase.ONBOARDING_P2;
-        } else if ((GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSING
-                    && collision.gameObject.name.Equals("wire"))
-                || GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSED
-                    && collision.gameObject.name.Equals("trigger")  ) {
+        if (collision.gameObject.name.Equals("trigger")) {
+            if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.HIDING_CUTTERS) {
+                GetComponent<ExplosionOne>().Explode();
+                GameStateManager.instance.currentGamePhase = GameStateManager.Phase.ONBOARDING_P2;
+            } else if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSED) {
+                GetComponent<ExplosionOne>().Explode();
+            }
+        }
+        if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSING
+                && collision.gameObject.name.Equals("wire")) {
             GetComponent<ExplosionOne>().Explode();
             GameStateManager.instance.currentGamePhase = GameStateManager.Phase.DEFUSED;
+            collision.gameObject.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -90,6 +88,7 @@ public class PickUp : MonoBehaviour {
         if (objectHeld == null)
         {
             objectHeld = obj;
+            GetComponent<AudioSource>().Play();
         }
         Rigidbody rb  = objectHeld.GetComponent<Rigidbody>();
         float speed = 100.0f;

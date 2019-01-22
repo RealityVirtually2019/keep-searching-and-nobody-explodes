@@ -6,9 +6,11 @@ public class HatPutter : MonoBehaviour {
         if (other.gameObject == GameStateManager.instance.BomberHatInstance) {
             Destroy(other.gameObject);
             GameStateManager.instance.currentGamePhase = GameStateManager.Phase.HIDING_CUTTERS;
+            GetComponent<AudioSource>().Play();
         } else if (other.gameObject == GameStateManager.instance.DefuserHatInstance) {
             Destroy(other.gameObject);
             GameStateManager.instance.currentGamePhase = GameStateManager.Phase.FINDING_CUTTERS;
+            GetComponent<AudioSource>().Play();
         }
     }
 }
