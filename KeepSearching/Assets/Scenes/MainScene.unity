@@ -444,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9574d47050c641f0b2a9bb230bb3cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Exploder: {fileID: 0}
 --- !u!136 &800182614
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -700,6 +701,10 @@ Prefab:
       propertyPath: m_TagString
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 1082968196093422, guid: fd8ef128a523847c98431c22359c5bc3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd8ef128a523847c98431c22359c5bc3, type: 2}
   m_IsPrefabParent: 0
@@ -774,6 +779,13 @@ MonoBehaviour:
   prefabArray:
   - {fileID: 1285121568806836, guid: f1bab2fe469ce4dbc958ea86238f3ca4, type: 2}
   - {fileID: 1104369949765764, guid: 2988b9144e55d47d19951364a9a833f3, type: 2}
+  - {fileID: 1501455196981222, guid: b3234729415af4aea8132d252ed37806, type: 2}
+  - {fileID: 1964230697852450, guid: 1b877b6a24135450986cfad24b53431c, type: 2}
+  - {fileID: 1916841445873570, guid: 585e6eef8401148b39102fc1c0645742, type: 2}
+  - {fileID: 1989708771935990, guid: 5c4095c385a034480b17c8cb7e600e3d, type: 2}
+  - {fileID: 1858957329223438, guid: 407b9508e85634421a790599399b7aff, type: 2}
+  - {fileID: 1345389627007440, guid: ad7dd48f32cab4836b728974cbcfd416, type: 2}
+  - {fileID: 1309216249618238, guid: d93eab1392498489bb288153d55709e9, type: 2}
   - {fileID: 1501455196981222, guid: b3234729415af4aea8132d252ed37806, type: 2}
   bomb: {fileID: 1083355781}
   burstCount: 20

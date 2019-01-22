@@ -2,7 +2,7 @@
 
 public class DestroyFragment : MonoBehaviour {
 
-    public float minY = -0.5f;
+    public float minY = -2.5f;
 
 	// Update is called once per frame
 	void Update () {

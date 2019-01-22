@@ -14,7 +14,7 @@ public class ExplosionController : MonoBehaviour {
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.RightBracket)) {
             HandleExplosion();

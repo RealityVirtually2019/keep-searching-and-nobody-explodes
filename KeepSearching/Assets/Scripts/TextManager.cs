@@ -10,7 +10,16 @@ public class TextManager : MonoBehaviour {
     public string bombPlace, grabP1, hatOn, wcPlace, touchBomb, grabP2, wcCollect, bombDiff, diff, switchP, boom;
     public int state = 0;
 
-	// Use this for initialization
+    private void Awake()
+    {
+        if (GameStateManager.instance == null || GetComponent<Text>() == null) {
+            Debug.Log("GameStateManager or Text object are null; disabling script");
+            enabled = false;
+        }
+    }
+
+
+    // Use this for initialization
 	void Start () {
 
     
