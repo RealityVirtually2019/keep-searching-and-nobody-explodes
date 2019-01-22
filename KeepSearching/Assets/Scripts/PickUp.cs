@@ -20,17 +20,18 @@ public class PickUp : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (objectHeld != null && !grabControl.triggerPressed)
+        if (objectHeld != null && !grabControl.triggerPressed
+                && GameStateManager.instance.currentGamePhase != GameStateManager.Phase.DEFUSING)
         {
             ReleaseObject();
         }
         else if(objectInRange != null && grabControl.triggerPressed)
         {
-            if (objectInRange.tag == "object")
+            if (objectInRange.CompareTag("object"))
             {
                 HoldObject(objectInRange);
             }
-            if (objectInRange.tag == "cutters")
+            if (objectInRange.CompareTag("cutters"))
             {
                 objectInRange.transform.SetParent(controller);
                 var rb = objectInRange.GetComponent<Rigidbody>();
@@ -38,6 +39,7 @@ public class PickUp : MonoBehaviour {
                 rb.isKinematic = true;
                 objectInRange.transform.position = controller.position;
                 GameStateManager.instance.currentGamePhase = GameStateManager.Phase.DEFUSING;
+                objectHeld = objectInRange;
             }
         }
 
@@ -56,11 +58,16 @@ public class PickUp : MonoBehaviour {
     {
         print("Trigger collided object: " + collision.gameObject.name);
         objectInRange = collision.gameObject;
-        if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSING && collision.gameObject.name.Equals("wire")) {
-//			if (other.CompareTag("GameController")) {
+        if (GameStateManager.instance.currentGamePhase == GameStateManager.Phase.HIDING_CUTTERS
+                && collision.gameObject.CompareTag("GameController")) {
+            collision.gameObject.GetComponent<ExplosionOne>().Explode();
+            GameStateManager.instance.currentGamePhase = GameStateManager.Phase.ONBOARDING_P2;
+        } else if ((GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSING
+                    && collision.gameObject.name.Equals("wire"))
+                || GameStateManager.instance.currentGamePhase == GameStateManager.Phase.DEFUSED
+                    && collision.gameObject.name.Equals("trigger")  ) {
             GetComponent<ExplosionOne>().Explode();
             GameStateManager.instance.currentGamePhase = GameStateManager.Phase.DEFUSED;
-//			}
         }
     }
 
